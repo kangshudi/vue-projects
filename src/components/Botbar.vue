@@ -7,7 +7,7 @@
             replace 
             :to="item.path" 
         >
-            <van-icon size=".25rem" :name="item.inactive" />
+            <van-icon size=".25rem" :name="item.inactive"/>
             {{item.text}}
         </van-tabbar-item>
     </van-tabbar>
