@@ -1,6 +1,6 @@
 <template>
-    <div id="home">
-        首页
+    <div id="error">
+        not found!404
     </div>
 </template>
 

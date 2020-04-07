@@ -1,6 +1,6 @@
 <template>
-    <div id="home">
-        首页
+    <div id="classift">
+        分类
     </div>
 </template>
 

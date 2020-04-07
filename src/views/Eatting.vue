@@ -1,6 +1,6 @@
 <template>
-    <div id="home">
-        首页
+    <div id="eatting">
+        吃饭吧
     </div>
 </template>
 

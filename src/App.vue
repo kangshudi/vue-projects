@@ -1,32 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <Topbar v-show="isTopbarShow"></Topbar>
+      <router-view></router-view>
+      <Botbar v-show="isBotbarShow"></Botbar>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Topbar from "@/components/Topbar"
+import Botbar from "@/components/Botbar"
+import "@/utils/rem"
 
-#nav {
-  padding: 30px;
+// 引入vuex
+import {mapState} from "vuex"
+export default {
+  components:{
+    Topbar,
+    Botbar
+  },
+  computed:{
+    ...mapState("TopbarMod",["isTopbarShow"]),
+    ...mapState("BotbarMod",["isBotbarShow"])
+  },
+  mounted(){
+    // console.log(this.$store.state.Topbar.isTopbarShow)
+  },
+  data(){
+    return {
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
     }
   }
+}
+</script>
+
+<style lang="scss">
+#app{
+  width: 100%;
 }
 </style>
